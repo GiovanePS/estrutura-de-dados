@@ -5,6 +5,11 @@ public class SuperArray {
     private Integer[] superArray;
     
     public SuperArray(Integer inicio, Integer fim) {
+        if (inicio > fim) {
+            int temp = inicio;
+            inicio = fim;
+            fim = temp;
+        }
         this.inicio = inicio;
         this.fim = fim;
         this.tamanho = fim - inicio + 1;
